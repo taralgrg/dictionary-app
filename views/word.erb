@@ -1,0 +1,19 @@
+<h3>Here are all the definition for
+    <%= @word.word() %>:</h3>
+
+<ul>
+    <% @word.definitions().each() do |define| %>
+    <li>
+        <a href="/definitions/<%= define.id() %>"><%= define.definition() %></a>
+    </li>
+    <% end %>
+</ul>
+
+<ul class="list-group">
+    <li class="list-group-item list-group-item-success">
+        <a href="/words/<%= @word.id %>/words/new">Add a new definition</a>
+    </li>
+    <li class="list-group-item list-group-item-info">
+        <a href="/">Return to Main Page</a>
+    </li>
+</ul>
